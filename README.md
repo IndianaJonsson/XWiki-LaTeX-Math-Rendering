@@ -29,6 +29,17 @@ Add the Math Extension: Enable the GitLab extension or the dedicated Admonition 
 
 Configure Options: Ensure the GitLabExtension is added to the parser's extension list.
 
+
+
+
+
+// 1
+
+
+
+
+
+
 By enabling this extension, the parser will tokenize $ ... $ as a MathNode before processing inline formatting, effectively insulating the underscores and asterisks inside the formula.
 
 
@@ -73,6 +84,13 @@ Apply these changes:
 
 Add Imports:
 
+
+
+//2
+
+
+
+
 code
 Java
 
@@ -84,6 +102,14 @@ Update the Builder Logic:
 Look for the method that initializes the options (usually inside the constructor or a createParser method). It will look something like MutableDataSet options = new MutableDataSet();.
 
 Inject the GitLabExtension into the extensions list:
+
+
+
+
+
+//3
+
+
 
 
 
